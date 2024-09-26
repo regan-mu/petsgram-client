@@ -9,6 +9,7 @@ import AccountLayout from './components/layouts/accountLayout';
 import PostProfile from './pages/postProfile';
 import EditProfile from './pages/editProfile';
 import Notifications from './pages/notifications';
+import NotFound from './pages/notFound';
 
 const Logout = () => {
   localStorage.clear();
@@ -30,6 +31,7 @@ function App() {
           <Route path="/edit/:id" element={<ProtectedRoutes><EditProfile /></ProtectedRoutes>} />
           <Route path="/notifications" element={<ProtectedRoutes><Notifications /></ProtectedRoutes>} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
