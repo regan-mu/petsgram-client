@@ -15,7 +15,7 @@ const Login = () => {
                 <LoginForm />
             </div>
             <div>
-                <a className="text-darkText text-sm font-semibold" href="#">Forgot password</a>
+                <a className="text-darkText text-sm font-semibold" href="/request-reset">Forgot password</a>
             </div>
             <div className="w-full border font-semibold text-sm rounded-sm flex justify-center items-center gap-2 md:w-96 p-5">
                 <span>Don't have an account? </span>

@@ -10,6 +10,8 @@ import PostProfile from './pages/postProfile';
 import EditProfile from './pages/editProfile';
 import Notifications from './pages/notifications';
 import NotFound from './pages/notFound';
+import RequestReset from './pages/requestReset';
+import ResetPassword from './pages/resetPassword';
 
 const Logout = () => {
   localStorage.clear();
@@ -24,6 +26,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/request-reset" element={<RequestReset />} />
+        <Route path="/reset/:uidb64/:token" element={<ResetPassword />} />
         <Route element={<AccountLayout />}>
           <Route path="/" element={<ProtectedRoutes><Home /></ProtectedRoutes>} />
           <Route path="/profile/:id" element={<ProtectedRoutes><Profile /></ProtectedRoutes>} />

@@ -62,6 +62,16 @@ export interface User extends PostOwner {
     posts: Ipost[]
 }
 
+export interface Irequestreset {
+    email: string
+}
+export interface Ipasswordreset {
+    password: string,
+    confirmPassword: string,
+    uidb64: string | undefined,
+    token: string | undefined
+}
+
 
 
 export type  RegisterInputs = z.infer<typeof registerFormSchema>;

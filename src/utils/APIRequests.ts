@@ -1,4 +1,4 @@
-import { User, UpdateInputs } from "../types";
+import { UpdateInputs, Irequestreset, Ipasswordreset } from "../types";
 import API from "./axiosConfig";
 import { AxiosResponse, isAxiosError } from "axios";
 
@@ -168,4 +168,21 @@ export const UpdateUserInfo = async (data: UpdateInputs) => {
             return "Something went wrong";
         }
     }
+}
+// Update Avatar
+export const RequestPasswordReset = async (data: Irequestreset) => {
+    try {
+        const res: AxiosResponse = await API.post("/request-reset", data);
+        return res?.data;
+    } catch(error) {
+        if(isAxiosError(error)) {
+            return error?.response?.data?.detail;
+        } else {
+            return "Something went wrong";
+        }
+    }
+}
+
+export const ResetNewPassword = async (data: Ipasswordreset) => {
+    return API.patch("reset-password", data);
 }
