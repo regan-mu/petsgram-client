@@ -1,7 +1,9 @@
 # 🐾 Petsgram Frontend
 
 Welcome to Petsgram Frontend, the React-based frontend of a social media application where users can post, like, and comment on their favorite pet photos! This frontend interacts with the Petsgram Backend API to provide users with a smooth experience for browsing, sharing, and discovering pets.
-Checkout the live app at [Live](https://petsgram-client.vercel.app/)
+
+* Checkout the live app at [Live](https://petsgram-client.vercel.app/)
+* The backend API is found [HERE](https://github.com/regan-mu/petsgram-backend)
 
 ## 🛠️ Installation
 
